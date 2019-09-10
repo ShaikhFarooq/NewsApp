@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84C3CE5923281EE6005F354D /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3CE5823281EE6005F354D /* NewsCell.swift */; };
+		84C3CE5A232821B3005F354D /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C38E2328139D00E17AA4 /* RobotoSlab-Regular.ttf */; };
+		84C3CE5B232821B9005F354D /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C38D2328139600E17AA4 /* RobotoSlab-Bold.ttf */; };
 		84C6C36B23280B0D00E17AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C36A23280B0D00E17AA4 /* AppDelegate.swift */; };
-		84C6C36D23280B0D00E17AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C36C23280B0D00E17AA4 /* ViewController.swift */; };
+		84C6C36D23280B0D00E17AA4 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C36C23280B0D00E17AA4 /* NewsListViewController.swift */; };
 		84C6C37023280B0D00E17AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C36E23280B0D00E17AA4 /* Main.storyboard */; };
 		84C6C37223280B0E00E17AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C37123280B0E00E17AA4 /* Assets.xcassets */; };
 		84C6C37523280B0E00E17AA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C37323280B0E00E17AA4 /* LaunchScreen.storyboard */; };
@@ -26,9 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84C3CE5823281EE6005F354D /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		84C6C36723280B0D00E17AA4 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C6C36A23280B0D00E17AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84C6C36C23280B0D00E17AA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84C6C36C23280B0D00E17AA4 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		84C6C36F23280B0D00E17AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84C6C37123280B0E00E17AA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84C6C37423280B0E00E17AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		84C6C37B23280B0E00E17AA4 /* NewsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C6C37F23280B0E00E17AA4 /* NewsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppTests.swift; sourceTree = "<group>"; };
 		84C6C38123280B0E00E17AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C6C38D2328139600E17AA4 /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
+		84C6C38E2328139D00E17AA4 /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84C3CE5623281EC6005F354D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84C3CE5723281ED1005F354D /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84C3CE5723281ED1005F354D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84C3CE5823281EE6005F354D /* NewsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		84C6C35E23280B0D00E17AA4 = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +99,11 @@
 		84C6C36923280B0D00E17AA4 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				84C6C36A23280B0D00E17AA4 /* AppDelegate.swift */,
-				84C6C36C23280B0D00E17AA4 /* ViewController.swift */,
-				84C6C36E23280B0D00E17AA4 /* Main.storyboard */,
-				84C6C37123280B0E00E17AA4 /* Assets.xcassets */,
-				84C6C37323280B0E00E17AA4 /* LaunchScreen.storyboard */,
-				84C6C37623280B0E00E17AA4 /* Info.plist */,
+				84C3CE5623281EC6005F354D /* Views */,
+				84C6C3952328194D00E17AA4 /* Resources */,
+				84C6C3942328193800E17AA4 /* Base Classes */,
+				84C6C3932328191B00E17AA4 /* App Delegate */,
+				84C6C38F2328185F00E17AA4 /* Custom */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -94,6 +115,50 @@
 				84C6C38123280B0E00E17AA4 /* Info.plist */,
 			);
 			path = NewsAppTests;
+			sourceTree = "<group>";
+		};
+		84C6C38A2328132300E17AA4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				84C6C38E2328139D00E17AA4 /* RobotoSlab-Regular.ttf */,
+				84C6C38D2328139600E17AA4 /* RobotoSlab-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		84C6C38F2328185F00E17AA4 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				84C6C38A2328132300E17AA4 /* Fonts */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		84C6C3932328191B00E17AA4 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				84C6C36A23280B0D00E17AA4 /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		84C6C3942328193800E17AA4 /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				84C6C36C23280B0D00E17AA4 /* NewsListViewController.swift */,
+			);
+			path = "Base Classes";
+			sourceTree = "<group>";
+		};
+		84C6C3952328194D00E17AA4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84C6C36E23280B0D00E17AA4 /* Main.storyboard */,
+				84C6C37123280B0E00E17AA4 /* Assets.xcassets */,
+				84C6C37323280B0E00E17AA4 /* LaunchScreen.storyboard */,
+				84C6C37623280B0E00E17AA4 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +242,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C3CE5B232821B9005F354D /* RobotoSlab-Bold.ttf in Resources */,
+				84C3CE5A232821B3005F354D /* RobotoSlab-Regular.ttf in Resources */,
 				84C6C37523280B0E00E17AA4 /* LaunchScreen.storyboard in Resources */,
 				84C6C37223280B0E00E17AA4 /* Assets.xcassets in Resources */,
 				84C6C37023280B0D00E17AA4 /* Main.storyboard in Resources */,
@@ -197,8 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84C6C36D23280B0D00E17AA4 /* ViewController.swift in Sources */,
+				84C6C36D23280B0D00E17AA4 /* NewsListViewController.swift in Sources */,
 				84C6C36B23280B0D00E17AA4 /* AppDelegate.swift in Sources */,
+				84C3CE5923281EE6005F354D /* NewsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SBFLP73DB;
-				INFOPLIST_FILE = NewsApp/Info.plist;
+				INFOPLIST_FILE = NewsApp/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -381,7 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SBFLP73DB;
-				INFOPLIST_FILE = NewsApp/Info.plist;
+				INFOPLIST_FILE = NewsApp/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
