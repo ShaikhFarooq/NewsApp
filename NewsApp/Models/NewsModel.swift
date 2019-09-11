@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+// MARK: - News
+struct NewsModel: Codable{
+    var articles: [Articles]
+}
+
+struct Articles: Codable {
+    var title: String?
+    var description: String?
+    var urlToImage: String?
+    var author: String?
+    var publishedAt: String?
+}
