@@ -26,11 +26,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GQF-W7-f39">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GQF-W7-f39">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <color key="backgroundColor" red="0.13331398367881775" green="0.13334444165229797" blue="0.13331207633018494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="188" id="9K1-1G-UJ0" customClass="NewsCell" customModule="NewsApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="188" id="9K1-1G-UJ0" customClass="NewsCell" customModule="NewsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="188"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9K1-1G-UJ0" id="X8c-CS-2Ch">
@@ -38,48 +38,61 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyb-XB-z0t">
-                                                    <rect key="frame" x="10" y="10" width="394" height="168"/>
+                                                    <rect key="frame" x="16" y="25" width="382" height="163"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-zl-qSJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="168"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-zl-qSJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="163"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Next Big Thing After Bitcoin. Why Today’s Stocks Are Outdated." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umT-2z-UbM">
-                                                            <rect key="frame" x="8" y="33" width="359" height="67"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
-                                                            <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-07-03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJf-C0-BdC">
+                                                            <rect key="frame" x="46.5" y="137" width="65" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="h3J-Ox-Xu8"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="12"/>
+                                                            <color key="textColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CNN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oku-dq-i0P">
-                                                            <rect key="frame" x="8" y="149" width="27" height="12"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CNN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oku-dq-i0P">
+                                                            <rect key="frame" x="12" y="137" width="26.5" height="16"/>
                                                             <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="12"/>
                                                             <color key="textColor" red="0.72941176470588232" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2019-07-03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJf-C0-BdC">
-                                                            <rect key="frame" x="53" y="148" width="62" height="14"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="12"/>
-                                                            <color key="textColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Next Big Thing After Bitcoin. Why Today’s Stocks Are Outdated." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umT-2z-UbM">
+                                                            <rect key="frame" x="12" y="64" width="358" height="60"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60" id="jxC-9l-COR"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
+                                                            <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="IJf-C0-BdC" firstAttribute="bottom" secondItem="oku-dq-i0P" secondAttribute="bottom" id="14m-CV-61v"/>
+                                                        <constraint firstItem="umT-2z-UbM" firstAttribute="leading" secondItem="qyb-XB-z0t" secondAttribute="leading" constant="12" id="A31-ZB-Ey3"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IJf-C0-BdC" secondAttribute="trailing" constant="20" symbolic="YES" id="D24-Nn-0Qf"/>
+                                                        <constraint firstItem="IJf-C0-BdC" firstAttribute="width" secondItem="oku-dq-i0P" secondAttribute="width" priority="250" id="Gsx-Zd-9Md"/>
                                                         <constraint firstItem="uoZ-zl-qSJ" firstAttribute="top" secondItem="qyb-XB-z0t" secondAttribute="top" id="INS-Wg-tHM"/>
+                                                        <constraint firstItem="umT-2z-UbM" firstAttribute="leading" secondItem="oku-dq-i0P" secondAttribute="leading" id="JkM-eH-5Qq"/>
+                                                        <constraint firstItem="IJf-C0-BdC" firstAttribute="leading" secondItem="oku-dq-i0P" secondAttribute="trailing" constant="8" id="TAF-I8-A4k"/>
                                                         <constraint firstAttribute="trailing" secondItem="uoZ-zl-qSJ" secondAttribute="trailing" id="UHk-SF-9Zw"/>
+                                                        <constraint firstItem="IJf-C0-BdC" firstAttribute="top" secondItem="umT-2z-UbM" secondAttribute="bottom" constant="13" id="VFu-rs-90Z"/>
+                                                        <constraint firstAttribute="trailing" secondItem="umT-2z-UbM" secondAttribute="trailing" constant="12" id="Xcv-kO-FIM"/>
+                                                        <constraint firstAttribute="bottom" secondItem="oku-dq-i0P" secondAttribute="bottom" constant="10" id="Yyd-1N-rd5"/>
                                                         <constraint firstItem="uoZ-zl-qSJ" firstAttribute="leading" secondItem="qyb-XB-z0t" secondAttribute="leading" id="bA7-af-neT"/>
+                                                        <constraint firstItem="IJf-C0-BdC" firstAttribute="top" secondItem="oku-dq-i0P" secondAttribute="top" id="bi5-r5-Ja7"/>
                                                         <constraint firstAttribute="bottom" secondItem="uoZ-zl-qSJ" secondAttribute="bottom" id="tze-TM-NSU"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" red="0.1333139837" green="0.13334444170000001" blue="0.1333120763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="qyb-XB-z0t" firstAttribute="top" secondItem="X8c-CS-2Ch" secondAttribute="top" constant="10" id="BfY-1M-ufh"/>
-                                                <constraint firstAttribute="trailing" secondItem="qyb-XB-z0t" secondAttribute="trailing" constant="10" id="DEb-qy-fyb"/>
-                                                <constraint firstItem="qyb-XB-z0t" firstAttribute="leading" secondItem="X8c-CS-2Ch" secondAttribute="leading" constant="10" id="VK1-9e-v9Z"/>
-                                                <constraint firstAttribute="bottom" secondItem="qyb-XB-z0t" secondAttribute="bottom" constant="10" id="brm-tZ-iwH"/>
+                                                <constraint firstItem="qyb-XB-z0t" firstAttribute="top" secondItem="X8c-CS-2Ch" secondAttribute="top" constant="25" id="BfY-1M-ufh"/>
+                                                <constraint firstAttribute="trailing" secondItem="qyb-XB-z0t" secondAttribute="trailing" constant="16" id="DEb-qy-fyb"/>
+                                                <constraint firstItem="qyb-XB-z0t" firstAttribute="leading" secondItem="X8c-CS-2Ch" secondAttribute="leading" constant="16" id="VK1-9e-v9Z"/>
+                                                <constraint firstAttribute="bottom" secondItem="qyb-XB-z0t" secondAttribute="bottom" id="brm-tZ-iwH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1333139837" green="0.13334444170000001" blue="0.1333120763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -91,7 +104,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1333139837" green="0.13334444170000001" blue="0.1333120763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GQF-W7-f39" secondAttribute="bottom" id="Chf-iy-pHk"/>
                             <constraint firstItem="GQF-W7-f39" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IcM-CD-P8G"/>
@@ -117,45 +130,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="axO-hX-bM7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="axO-hX-bM7">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Next Big Thing After Bitcoin. Why Today’s Stocks Are Outdated." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUQ-5l-L3k">
-                                <rect key="frame" x="28" y="390" width="359" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Next Big Thing After Bitcoin. Why Today’s Stocks Are Outdated." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUQ-5l-L3k">
+                                <rect key="frame" x="24" y="448.5" width="366" height="115"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="29"/>
                                 <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CNN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uL-lw-pCA">
-                                <rect key="frame" x="28" y="538" width="57" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
-                                <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2019-07-09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pk-Yy-Xmz">
-                                <rect key="frame" x="290" y="538" width="104" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
-                                <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pE-WN-Hty">
-                                <rect key="frame" x="28" y="577" width="359" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="7GB-fw-UU8">
+                                <rect key="frame" x="24" y="613.5" width="366" height="26.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CNN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uL-lw-pCA">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
+                                        <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-07-09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pk-Yy-Xmz">
+                                        <rect key="frame" x="258" y="0.0" width="108" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
+                                        <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pE-WN-Hty">
+                                <rect key="frame" x="24" y="652" width="366" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Hpe-wB-asa"/>
+                                </constraints>
                                 <string key="text">The most successful application of blockchain, so far, has been Bitcoin. It seems that there is nothing that blockchain can do better – recording transactions... The post The Next Big Thing After Bitcoin. Why Today’s Stocks Are Outdated. appeared first on Val…</string>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="14"/>
                                 <color key="textColor" red="0.72941176470588232" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7GB-fw-UU8" firstAttribute="top" secondItem="RUQ-5l-L3k" secondAttribute="bottom" constant="50" id="5AX-hU-4Jd"/>
+                            <constraint firstItem="RUQ-5l-L3k" firstAttribute="leading" secondItem="mea-4a-1Wq" secondAttribute="leading" constant="24" id="8OV-aX-jqS"/>
                             <constraint firstItem="axO-hX-bM7" firstAttribute="leading" secondItem="mea-4a-1Wq" secondAttribute="leading" id="B0t-Rk-7r0"/>
                             <constraint firstItem="mea-4a-1Wq" firstAttribute="bottom" secondItem="axO-hX-bM7" secondAttribute="bottom" id="KKf-Na-zSr"/>
+                            <constraint firstItem="6pE-WN-Hty" firstAttribute="leading" secondItem="RUQ-5l-L3k" secondAttribute="leading" id="L6a-Rz-oAn"/>
+                            <constraint firstItem="7GB-fw-UU8" firstAttribute="leading" secondItem="RUQ-5l-L3k" secondAttribute="leading" id="ZaC-pT-MRM"/>
+                            <constraint firstItem="mea-4a-1Wq" firstAttribute="trailing" secondItem="RUQ-5l-L3k" secondAttribute="trailing" constant="24" id="dAa-gG-7wy"/>
+                            <constraint firstItem="7GB-fw-UU8" firstAttribute="trailing" secondItem="RUQ-5l-L3k" secondAttribute="trailing" id="fuo-Zd-nJh"/>
                             <constraint firstItem="axO-hX-bM7" firstAttribute="top" secondItem="mea-4a-1Wq" secondAttribute="top" id="mft-F7-MdT"/>
                             <constraint firstItem="mea-4a-1Wq" firstAttribute="trailing" secondItem="axO-hX-bM7" secondAttribute="trailing" id="toi-lB-fwH"/>
+                            <constraint firstItem="6pE-WN-Hty" firstAttribute="top" secondItem="7GB-fw-UU8" secondAttribute="bottom" constant="12" id="wiJ-yK-q54"/>
+                            <constraint firstItem="6pE-WN-Hty" firstAttribute="trailing" secondItem="RUQ-5l-L3k" secondAttribute="trailing" id="xBS-Qj-7ec"/>
+                            <constraint firstItem="mea-4a-1Wq" firstAttribute="bottom" secondItem="6pE-WN-Hty" secondAttribute="bottom" constant="90" id="xmd-dM-9Ii"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mea-4a-1Wq"/>
                     </view>
@@ -186,10 +212,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQs-dI-z3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-848" y="151"/>
+            <point key="canvasLocation" x="-290" y="-64"/>
         </scene>
     </scenes>
     <resources>
-        <image name="placeHolder" width="426.66665649414062" height="299.33334350585938"/>
+        <image name="placeHolder" width="633.33331298828125" height="400"/>
     </resources>
 </document>
