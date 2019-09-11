@@ -28,4 +28,16 @@ class NewsViewModel{
             
         }
     }
+    
+    // MARK: - To send each cell data using index
+    public func getCellViewModel(index: Int) -> NewsTableViewCellModel? {
+        guard let news = news else { return nil }
+        let newsTableViewCellModel = NewsTableViewCellModel(news: (news.articles[index]))
+        return newsTableViewCellModel
+    }
+    
+    // MARK: - Number of movies to be shown
+    public var count: Int {
+        return news?.articles.count ?? 0
+    }
 }

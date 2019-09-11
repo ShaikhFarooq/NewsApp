@@ -9,17 +9,38 @@
 import UIKit
 
 class NewsListViewController: UIViewController {
-
+    
     @IBOutlet weak var mTableView: UITableView!
+    
+    // MARK: - Injection
+    let newsViewModel = NewsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        shadowForNavBar()
+        fetchNewsHeadlines()
+    }
+    
+    func shadowForNavBar(){
         self.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
         self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
         self.navigationController?.navigationBar.layer.shadowRadius = 4.0
         self.navigationController?.navigationBar.layer.shadowOpacity = 0.5
         self.navigationController?.navigationBar.layer.masksToBounds = false
+    }
+    
+    func fetchNewsHeadlines(){
+        newsViewModel.fetchNewsHeadlines { [weak self] in
+            self?.reloadData()
+        }
+    }
+    
+    //MARK:- Relaod the tableview in order to refresh the list
+    func reloadData(){
+        DispatchQueue.main.async {
+            self.mTableView.reloadData()
+        }
     }
 }
 
@@ -31,14 +52,17 @@ extension NewsListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return newsViewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let newsCell = tableView.dequeueReusableCell(withIdentifier: "newsCell",
-                                                            for: indexPath) as? NewsCell else {
-                                                                return UITableViewCell()
+        guard let newsCell = tableView.dequeueReusableCell(withIdentifier: NewsCell.reuseIdentifier,
+                                                           for: indexPath) as? NewsCell else {
+                                                            return UITableViewCell()
         }
+        let cellViewModel = newsViewModel.getCellViewModel(index: indexPath.row)
+        newsCell.viewModel = cellViewModel
+    
         return newsCell
     }
     
