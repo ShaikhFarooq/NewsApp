@@ -31,7 +31,7 @@ class NewsAppTests: XCTestCase {
         }
     }
     
-    func testSearchWithMovieAvailable() {
+    func testNewsHeadlinesAvailable() {
         let promise = expectation(description: "Fetch top headlines")
         let url: String = "\(EndPoints.TopHeadline.path)\(EndPoints.Country.path)\(APIKey.ApiKey.rawValue)"
         Network.shared.fetchNewsHeadlines(urlByName: url,type: NewsModel.self) { (response,success,error) in
@@ -42,4 +42,16 @@ class NewsAppTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
 
+    func testNoNewsHeadlinesAvailable() {
+        let promise = expectation(description: "Failer to fetch top headlines")
+        let url: String = "\(EndPoints.TopHeadline.path)\(EndPoints.Country.path)\(APIKey.ApiKey.rawValue)\("a")"
+        Network.shared.fetchNewsHeadlines(urlByName: url,type: NewsModel.self) { (response,success,error) in
+            XCTAssertTrue(success == "False")
+            XCTAssertEqual("The operation couldn’t be completed. (No News error -101.)",
+                           error?.localizedDescription)
+            promise.fulfill()
+        }
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
 }
