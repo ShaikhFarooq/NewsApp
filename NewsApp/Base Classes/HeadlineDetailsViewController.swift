@@ -24,8 +24,8 @@ class HeadlineDetailsViewController: UIViewController {
     //MARK: Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        backBtn.setButtonRounded()
         bindDataToUI()
-        backBtn.layer.cornerRadius = backBtn.bounds.width/2
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

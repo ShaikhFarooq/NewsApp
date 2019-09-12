@@ -8,7 +8,7 @@
 
 import Foundation
 import AlamofireImage
-
+import UIKit
 
 extension UIImageView {
     func setImage(fromURL url: URL, animatedOnce: Bool = true, withPlaceholder placeholderImage: UIImage? = #imageLiteral(resourceName: "placeHolder")) {
@@ -34,3 +34,11 @@ extension UINavigationController {
         }
     }
 }
+
+extension UIButton {
+    func setButtonRounded() {
+        self.layer.cornerRadius = (self.frame.width / 2)
+        self.layer.masksToBounds = true
+    }
+}
+

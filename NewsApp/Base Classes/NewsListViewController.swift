@@ -74,7 +74,6 @@ extension NewsListViewController: UITableViewDataSource {
         }
         let cellViewModel = newsViewModel.getCellViewModel(index: indexPath.row)
         newsCell.viewModel = cellViewModel
-        
         return newsCell
     }
     
