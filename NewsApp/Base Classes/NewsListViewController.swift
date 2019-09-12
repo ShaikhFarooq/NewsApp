@@ -42,6 +42,7 @@ class NewsListViewController: UIViewController {
     }
     
     func fetchNewsHeadlines(){
+        newsViewModel.showLoader(windowView: view)
         newsViewModel.fetchNewsHeadlines { [weak self] in
             self?.reloadData()
         }
@@ -73,12 +74,12 @@ extension NewsListViewController: UITableViewDataSource {
         }
         let cellViewModel = newsViewModel.getCellViewModel(index: indexPath.row)
         newsCell.viewModel = cellViewModel
-    
+        
         return newsCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         let selectedCellViewModel = newsViewModel.getCellViewModel(index: indexPath.row)
+        let selectedCellViewModel = newsViewModel.getCellViewModel(index: indexPath.row)
         if (selectedCellViewModel != nil){
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let headlineDetailViewController = storyBoard.instantiateViewController(withIdentifier: "headlineDetailsViewController") as! HeadlineDetailsViewController

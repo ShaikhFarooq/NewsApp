@@ -7,26 +7,35 @@
 //
 
 import Foundation
+import UIKit
 
 class NewsViewModel{
     
     // MARK: Properties
-
     private var news: NewsModel?
+    private let loader = Loader()
 
     func fetchNewsHeadlines(completion:(() -> Void)?){
         let url: String = "\(EndPoints.TopHeadline.path)\(EndPoints.Country.path)\(APIKey.ApiKey.rawValue)"
         print(url)
+        loader.show()
         Network.shared.fetchNewsHeadlines(urlByName: url,type: NewsModel.self) {[weak self] (response,success,error) in
-            print(response)
             if let responseData = response{
                 self?.news = responseData
+                self?.loader.hide()
                 completion?()
             }else if let error = error {
+                self?.loader.hide()
                 print(error)
             }
             
         }
+    }
+    
+    // MARK: - To add loaders
+    public func showLoader(windowView: UIView){
+        windowView.addSubview(loader)
+        loader.hide()
     }
     
     // MARK: - To send each cell data using index

@@ -31,8 +31,12 @@ class NewsCell: UITableViewCell {
             }else{
                 newsDateLbl.text = viewModel.publishedAt
             }
-            let newsPosterURL = viewModel.urlToImage
-            newsImageView.setImage(fromURL: URL(string: newsPosterURL)!)
+            let posterURL = viewModel.urlToImage
+            if let newsPosterURL = URL(string: posterURL){
+                newsImageView.setImage(fromURL: newsPosterURL, animatedOnce: true, withPlaceholder: #imageLiteral(resourceName: "placeHolder"))
+            } else {
+                return
+            }
         }
     }
     

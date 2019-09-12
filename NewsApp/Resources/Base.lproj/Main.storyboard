@@ -140,7 +140,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Next Big Thing After Bitcoin. Why Today’s Stocks Are Outdated." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUQ-5l-L3k">
-                                <rect key="frame" x="24" y="483" width="366" height="115"/>
+                                <rect key="frame" x="24" y="493" width="366" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="Rq7-Ru-mQc"/>
                                 </constraints>
@@ -149,7 +149,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="7GB-fw-UU8">
-                                <rect key="frame" x="24" y="648" width="366" height="20"/>
+                                <rect key="frame" x="24" y="658" width="366" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CNN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uL-lw-pCA">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="20"/>
@@ -162,7 +162,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-07-09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pk-Yy-Xmz">
-                                        <rect key="frame" x="263" y="0.0" width="103" height="20"/>
+                                        <rect key="frame" x="261" y="0.0" width="105" height="20"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
                                         <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -173,9 +173,9 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pE-WN-Hty">
-                                <rect key="frame" x="24" y="672" width="366" height="100"/>
+                                <rect key="frame" x="24" y="690" width="366" height="82"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Hpe-wB-asa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Hpe-wB-asa"/>
                                 </constraints>
                                 <string key="text">The most successful application of blockchain, so far, has been Bitcoin. It seems that there is nothing that blockchain can do better – recording transactions... The post The Next Big Thing After Bitcoin. Why Today’s Stocks Are Outdated. appeared first on Val…</string>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="14"/>
@@ -211,7 +211,7 @@
                             <constraint firstItem="7GB-fw-UU8" firstAttribute="trailing" secondItem="RUQ-5l-L3k" secondAttribute="trailing" id="fuo-Zd-nJh"/>
                             <constraint firstItem="axO-hX-bM7" firstAttribute="top" secondItem="mea-4a-1Wq" secondAttribute="top" id="mft-F7-MdT"/>
                             <constraint firstItem="mea-4a-1Wq" firstAttribute="trailing" secondItem="axO-hX-bM7" secondAttribute="trailing" id="toi-lB-fwH"/>
-                            <constraint firstItem="6pE-WN-Hty" firstAttribute="top" secondItem="7GB-fw-UU8" secondAttribute="bottom" constant="4" id="wiJ-yK-q54"/>
+                            <constraint firstItem="6pE-WN-Hty" firstAttribute="top" secondItem="7GB-fw-UU8" secondAttribute="bottom" constant="12" id="wiJ-yK-q54"/>
                             <constraint firstItem="6pE-WN-Hty" firstAttribute="trailing" secondItem="RUQ-5l-L3k" secondAttribute="trailing" id="xBS-Qj-7ec"/>
                             <constraint firstItem="mea-4a-1Wq" firstAttribute="bottom" secondItem="6pE-WN-Hty" secondAttribute="bottom" constant="90" id="xmd-dM-9Ii"/>
                         </constraints>

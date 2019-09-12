@@ -45,8 +45,13 @@ class HeadlineDetailsViewController: UIViewController {
         }else{
             headlineDateLbl.text = selectedCellViewModel.publishedAt
         }
-        let headlinePosterURL = selectedCellViewModel.urlToImage 
-        headlinePosterImgView.setImage(fromURL: URL(string: headlinePosterURL)!)
+       
+        let posterURL = selectedCellViewModel.urlToImage
+        if let headlinePosterURL = URL(string: posterURL){
+            headlinePosterImgView.setImage(fromURL: headlinePosterURL, animatedOnce: true, withPlaceholder: #imageLiteral(resourceName: "placeHolder"))
+        } else {
+            return
+        }
     }
     
     //MARK: User Interaction
