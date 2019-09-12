@@ -15,11 +15,22 @@ class NewsListViewController: UIViewController {
     // MARK: - Injection
     let newsViewModel = NewsViewModel()
     
+    //MARK: Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         shadowForNavBar()
         fetchNewsHeadlines()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     func shadowForNavBar(){
@@ -67,6 +78,13 @@ extension NewsListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         let selectedCellViewModel = newsViewModel.getCellViewModel(index: indexPath.row)
+        if (selectedCellViewModel != nil){
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let headlineDetailViewController = storyBoard.instantiateViewController(withIdentifier: "headlineDetailsViewController") as! HeadlineDetailsViewController
+            headlineDetailViewController.selectedCellViewModel = selectedCellViewModel
+            self.navigationController?.pushViewController(headlineDetailViewController, animated: true)
+        }
     }
 }
 

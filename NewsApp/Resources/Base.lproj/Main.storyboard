@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="647.82608695652175" y="-65.625"/>
         </scene>
-        <!--View Controller-->
+        <!--Headline Details View Controller-->
         <scene sceneID="6Xv-qV-cMx">
             <objects>
-                <viewController id="7Op-DR-Cjj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="headlineDetailsViewController" id="7Op-DR-Cjj" customClass="HeadlineDetailsViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7eR-8k-h4N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,57 +140,91 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Next Big Thing After Bitcoin. Why Today’s Stocks Are Outdated." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUQ-5l-L3k">
-                                <rect key="frame" x="24" y="448.5" width="366" height="115"/>
+                                <rect key="frame" x="24" y="483" width="366" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="Rq7-Ru-mQc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="29"/>
                                 <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="7GB-fw-UU8">
-                                <rect key="frame" x="24" y="613.5" width="366" height="26.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="7GB-fw-UU8">
+                                <rect key="frame" x="24" y="648" width="366" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CNN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uL-lw-pCA">
-                                        <rect key="frame" x="0.0" y="0.0" width="43.5" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="81g-0t-372"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="FYA-tK-K4i"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
                                         <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-07-09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pk-Yy-Xmz">
-                                        <rect key="frame" x="263" y="0.0" width="103" height="26.5"/>
+                                        <rect key="frame" x="263" y="0.0" width="103" height="20"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
                                         <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="9Pk-Yy-Xmz" firstAttribute="width" relation="greaterThanOrEqual" secondItem="1uL-lw-pCA" secondAttribute="width" id="RKT-mZ-KMz"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pE-WN-Hty">
-                                <rect key="frame" x="24" y="652" width="366" height="120"/>
+                                <rect key="frame" x="24" y="672" width="366" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="Hpe-wB-asa"/>
+                                    <constraint firstAttribute="height" constant="100" id="Hpe-wB-asa"/>
                                 </constraints>
                                 <string key="text">The most successful application of blockchain, so far, has been Bitcoin. It seems that there is nothing that blockchain can do better – recording transactions... The post The Next Big Thing After Bitcoin. Why Today’s Stocks Are Outdated. appeared first on Val…</string>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="14"/>
                                 <color key="textColor" red="0.72941176470588232" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzI-gP-Jzj">
+                                <rect key="frame" x="8" y="49" width="55" height="55"/>
+                                <color key="backgroundColor" red="0.16857966780662537" green="0.16849115490913391" blue="0.17675948143005371" alpha="0.49645226883561649" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="14h-Kx-dDS"/>
+                                    <constraint firstAttribute="height" constant="55" id="PYT-gr-LT7"/>
+                                </constraints>
+                                <state key="normal" image="backIcon">
+                                    <color key="titleColor" red="0.70465297476858757" green="0.70465297476858757" blue="0.70465297476858757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnTapped:" destination="7Op-DR-Cjj" eventType="touchUpInside" id="K4K-Dg-gFm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7GB-fw-UU8" firstAttribute="top" secondItem="RUQ-5l-L3k" secondAttribute="bottom" constant="50" id="5AX-hU-4Jd"/>
+                            <constraint firstItem="CzI-gP-Jzj" firstAttribute="top" secondItem="mea-4a-1Wq" secondAttribute="top" constant="5" id="80E-hH-D9O"/>
                             <constraint firstItem="RUQ-5l-L3k" firstAttribute="leading" secondItem="mea-4a-1Wq" secondAttribute="leading" constant="24" id="8OV-aX-jqS"/>
                             <constraint firstItem="axO-hX-bM7" firstAttribute="leading" secondItem="mea-4a-1Wq" secondAttribute="leading" id="B0t-Rk-7r0"/>
                             <constraint firstItem="mea-4a-1Wq" firstAttribute="bottom" secondItem="axO-hX-bM7" secondAttribute="bottom" id="KKf-Na-zSr"/>
                             <constraint firstItem="6pE-WN-Hty" firstAttribute="leading" secondItem="RUQ-5l-L3k" secondAttribute="leading" id="L6a-Rz-oAn"/>
+                            <constraint firstItem="CzI-gP-Jzj" firstAttribute="leading" secondItem="mea-4a-1Wq" secondAttribute="leading" constant="8" id="OZt-lb-QCZ"/>
                             <constraint firstItem="7GB-fw-UU8" firstAttribute="leading" secondItem="RUQ-5l-L3k" secondAttribute="leading" id="ZaC-pT-MRM"/>
                             <constraint firstItem="mea-4a-1Wq" firstAttribute="trailing" secondItem="RUQ-5l-L3k" secondAttribute="trailing" constant="24" id="dAa-gG-7wy"/>
                             <constraint firstItem="7GB-fw-UU8" firstAttribute="trailing" secondItem="RUQ-5l-L3k" secondAttribute="trailing" id="fuo-Zd-nJh"/>
                             <constraint firstItem="axO-hX-bM7" firstAttribute="top" secondItem="mea-4a-1Wq" secondAttribute="top" id="mft-F7-MdT"/>
                             <constraint firstItem="mea-4a-1Wq" firstAttribute="trailing" secondItem="axO-hX-bM7" secondAttribute="trailing" id="toi-lB-fwH"/>
-                            <constraint firstItem="6pE-WN-Hty" firstAttribute="top" secondItem="7GB-fw-UU8" secondAttribute="bottom" constant="12" id="wiJ-yK-q54"/>
+                            <constraint firstItem="6pE-WN-Hty" firstAttribute="top" secondItem="7GB-fw-UU8" secondAttribute="bottom" constant="4" id="wiJ-yK-q54"/>
                             <constraint firstItem="6pE-WN-Hty" firstAttribute="trailing" secondItem="RUQ-5l-L3k" secondAttribute="trailing" id="xBS-Qj-7ec"/>
                             <constraint firstItem="mea-4a-1Wq" firstAttribute="bottom" secondItem="6pE-WN-Hty" secondAttribute="bottom" constant="90" id="xmd-dM-9Ii"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mea-4a-1Wq"/>
                     </view>
+                    <connections>
+                        <outlet property="backBtn" destination="CzI-gP-Jzj" id="D67-kF-3zE"/>
+                        <outlet property="headlineAuthorLbl" destination="1uL-lw-pCA" id="9ER-qp-clq"/>
+                        <outlet property="headlineDateLbl" destination="9Pk-Yy-Xmz" id="A4Q-4R-FmQ"/>
+                        <outlet property="headlineDescriptionLbl" destination="6pE-WN-Hty" id="OaD-NY-cfZ"/>
+                        <outlet property="headlinePosterImgView" destination="axO-hX-bM7" id="TgF-BR-xkQ"/>
+                        <outlet property="headlineTitleLbl" destination="RUQ-5l-L3k" id="i66-hm-DTC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1j-RE-32W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,6 +256,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backIcon" width="33.333332061767578" height="33.333332061767578"/>
         <image name="placeHolder" width="633.33331298828125" height="400"/>
     </resources>
 </document>

@@ -18,6 +18,7 @@ class NewsCell: UITableViewCell {
     // MARK: - Properties
     public static let reuseIdentifier = "newsCell"
     
+    //MARK: Bind Data To UI
     public var viewModel: NewsTableViewCellModel? {
         didSet {
             guard let viewModel = viewModel else { return }
@@ -35,6 +36,7 @@ class NewsCell: UITableViewCell {
         }
     }
     
+    //MARK: Life Cycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
