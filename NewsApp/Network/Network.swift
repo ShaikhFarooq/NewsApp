@@ -19,8 +19,8 @@ class Network{
     
     // MARK: - Network/API Request
         func fetchNewsHeadlines<T: Codable>(urlByName: String,type: T.Type, completionHandler: ((_ response: T?,_ Success: String,Error?) -> Void)?) {
-    
-            //returns a list of NewsHeadlines 
+
+            //returns a list of NewsHeadlines
             Alamofire.request(urlByName).responseJSON {
                 response in
                 switch response.result {

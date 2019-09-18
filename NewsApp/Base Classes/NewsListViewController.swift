@@ -42,10 +42,10 @@ class NewsListViewController: UIViewController {
     }
     
     func fetchNewsHeadlines(){
-        newsViewModel.showLoader(windowView: view)
-        newsViewModel.fetchNewsHeadlines { [weak self] in
-            self?.reloadData()
-        }
+            newsViewModel.showLoader(windowView: view)
+            newsViewModel.fetchNewsHeadlines { [weak self] in
+                self?.reloadData()
+            }
     }
     
     //MARK:- Relaod the tableview in order to refresh the list
@@ -72,18 +72,32 @@ extension NewsListViewController: UITableViewDataSource {
                                                            for: indexPath) as? NewsCell else {
                                                             return UITableViewCell()
         }
-        let cellViewModel = newsViewModel.getCellViewModel(index: indexPath.row)
-        newsCell.viewModel = cellViewModel
-        return newsCell
+        if NetworkConnection.isConnectedToNetwork(){
+            let cellViewModel = newsViewModel.getCellViewModel(index: indexPath.row)
+            newsCell.viewModel = cellViewModel
+            return newsCell
+        }else{
+            let cellViewModel = newsViewModel.fetchSavedHeadlines(index: indexPath.row)
+            newsCell.headlineViewModel = cellViewModel
+            return newsCell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCellViewModel = newsViewModel.getCellViewModel(index: indexPath.row)
-        if (selectedCellViewModel != nil){
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let headlineDetailViewController = storyBoard.instantiateViewController(withIdentifier: "headlineDetailsViewController") as! HeadlineDetailsViewController
-            headlineDetailViewController.selectedCellViewModel = selectedCellViewModel
-            self.navigationController?.pushViewController(headlineDetailViewController, animated: true)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let headlineDetailViewController = storyBoard.instantiateViewController(withIdentifier: "headlineDetailsViewController") as! HeadlineDetailsViewController
+        if NetworkConnection.isConnectedToNetwork(){
+            let selectedCellViewModel = newsViewModel.getCellViewModel(index: indexPath.row)
+            if (selectedCellViewModel != nil){
+                headlineDetailViewController.selectedCellViewModel = selectedCellViewModel
+                self.navigationController?.pushViewController(headlineDetailViewController, animated: true)
+            }
+        }else{
+            let savedCellViewModel = newsViewModel.fetchSavedHeadlines(index: indexPath.row)
+            if (savedCellViewModel != nil){
+                headlineDetailViewController.savedCellViewModel = savedCellViewModel
+                self.navigationController?.pushViewController(headlineDetailViewController, animated: true)
+            }
         }
     }
     

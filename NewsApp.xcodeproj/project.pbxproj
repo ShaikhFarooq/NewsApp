@@ -21,6 +21,11 @@
 		84C3CE7623296B2A005F354D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3CE7523296B2A005F354D /* Extensions.swift */; };
 		84C3CE79232A8C52005F354D /* HeadlineDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3CE78232A8C52005F354D /* HeadlineDetailsViewController.swift */; };
 		84C3CE7C232ABB5B005F354D /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3CE7B232ABB5B005F354D /* Loader.swift */; };
+		84C3CE97232FD662005F354D /* DataStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3CE96232FD662005F354D /* DataStoreManager.swift */; };
+		84C3CE9A232FD744005F354D /* HeadlinesList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C3CE98232FD744005F354D /* HeadlinesList.xcdatamodeld */; };
+		84C3CEAA232FDBC6005F354D /* Headlines+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3CEA8232FDBC6005F354D /* Headlines+CoreDataClass.swift */; };
+		84C3CEAB232FDBC6005F354D /* Headlines+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3CEA9232FDBC6005F354D /* Headlines+CoreDataProperties.swift */; };
+		84C3CEAF232FDFED005F354D /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3CEAE232FDFED005F354D /* NetworkConnection.swift */; };
 		84C6C36B23280B0D00E17AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C36A23280B0D00E17AA4 /* AppDelegate.swift */; };
 		84C6C36D23280B0D00E17AA4 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C36C23280B0D00E17AA4 /* NewsListViewController.swift */; };
 		84C6C37023280B0D00E17AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C36E23280B0D00E17AA4 /* Main.storyboard */; };
@@ -54,6 +59,11 @@
 		84C3CE7523296B2A005F354D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		84C3CE78232A8C52005F354D /* HeadlineDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineDetailsViewController.swift; sourceTree = "<group>"; };
 		84C3CE7B232ABB5B005F354D /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		84C3CE96232FD662005F354D /* DataStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreManager.swift; sourceTree = "<group>"; };
+		84C3CE99232FD744005F354D /* HeadlinesList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeadlinesList.xcdatamodel; sourceTree = "<group>"; };
+		84C3CEA8232FDBC6005F354D /* Headlines+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Headlines+CoreDataClass.swift"; sourceTree = "<group>"; };
+		84C3CEA9232FDBC6005F354D /* Headlines+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Headlines+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		84C3CEAE232FDFED005F354D /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 		84C6C36723280B0D00E17AA4 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C6C36A23280B0D00E17AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C6C36C23280B0D00E17AA4 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
@@ -127,8 +137,8 @@
 		84C3CE6B2329530E005F354D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				84C3CE6C2329533F005F354D /* NewsModel.swift */,
-				84C3CE7023295540005F354D /* ResponseDecode.swift */,
+				84C3CEAC232FDC11005F354D /* Headlines */,
+				84C3CE9B232FDA27005F354D /* DataStore */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +146,7 @@
 		84C3CE7423296B16005F354D /* Resuseables */ = {
 			isa = PBXGroup;
 			children = (
+				84C3CEAD232FDFD5005F354D /* NetworkConnection */,
 				84C3CE7A232ABB4B005F354D /* Loader */,
 				84C3CE7723296B34005F354D /* Extensions */,
 			);
@@ -156,6 +167,49 @@
 				84C3CE7B232ABB5B005F354D /* Loader.swift */,
 			);
 			path = Loader;
+			sourceTree = "<group>";
+		};
+		84C3CE91232FD5E7005F354D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				84C3CE92232FD5F4005F354D /* DataStore */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		84C3CE92232FD5F4005F354D /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				84C3CE96232FD662005F354D /* DataStoreManager.swift */,
+				84C3CE98232FD744005F354D /* HeadlinesList.xcdatamodeld */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		84C3CE9B232FDA27005F354D /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				84C3CEA8232FDBC6005F354D /* Headlines+CoreDataClass.swift */,
+				84C3CEA9232FDBC6005F354D /* Headlines+CoreDataProperties.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		84C3CEAC232FDC11005F354D /* Headlines */ = {
+			isa = PBXGroup;
+			children = (
+				84C3CE6C2329533F005F354D /* NewsModel.swift */,
+				84C3CE7023295540005F354D /* ResponseDecode.swift */,
+			);
+			path = Headlines;
+			sourceTree = "<group>";
+		};
+		84C3CEAD232FDFD5005F354D /* NetworkConnection */ = {
+			isa = PBXGroup;
+			children = (
+				84C3CEAE232FDFED005F354D /* NetworkConnection.swift */,
+			);
+			path = NetworkConnection;
 			sourceTree = "<group>";
 		};
 		84C6C35E23280B0D00E17AA4 = {
@@ -181,12 +235,13 @@
 		84C6C36923280B0D00E17AA4 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				84C3CE7423296B16005F354D /* Resuseables */,
 				84C3CE6B2329530E005F354D /* Models */,
-				84C3CE6A232952FB005F354D /* ViewModels */,
-				84C3CE6523295018005F354D /* Network */,
 				84C3CE5623281EC6005F354D /* Views */,
+				84C3CE6A232952FB005F354D /* ViewModels */,
 				84C6C3942328193800E17AA4 /* Base Classes */,
+				84C3CE91232FD5E7005F354D /* DataManager */,
+				84C3CE7423296B16005F354D /* Resuseables */,
+				84C3CE6523295018005F354D /* Network */,
 				84C6C3952328194D00E17AA4 /* Resources */,
 				84C6C3932328191B00E17AA4 /* App Delegate */,
 				84C6C38F2328185F00E17AA4 /* Custom */,
@@ -447,11 +502,16 @@
 			files = (
 				84C3CE6D2329533F005F354D /* NewsModel.swift in Sources */,
 				84C3CE79232A8C52005F354D /* HeadlineDetailsViewController.swift in Sources */,
+				84C3CEAF232FDFED005F354D /* NetworkConnection.swift in Sources */,
 				84C3CE7C232ABB5B005F354D /* Loader.swift in Sources */,
 				84C3CE692329506D005F354D /* Network.swift in Sources */,
+				84C3CE97232FD662005F354D /* DataStoreManager.swift in Sources */,
+				84C3CE9A232FD744005F354D /* HeadlinesList.xcdatamodeld in Sources */,
 				84C3CE7123295540005F354D /* ResponseDecode.swift in Sources */,
 				84C3CE7323296867005F354D /* NewsTableViewCellModel.swift in Sources */,
 				84C6C36D23280B0D00E17AA4 /* NewsListViewController.swift in Sources */,
+				84C3CEAB232FDBC6005F354D /* Headlines+CoreDataProperties.swift in Sources */,
+				84C3CEAA232FDBC6005F354D /* Headlines+CoreDataClass.swift in Sources */,
 				84C3CE7623296B2A005F354D /* Extensions.swift in Sources */,
 				84C6C36B23280B0D00E17AA4 /* AppDelegate.swift in Sources */,
 				84C3CE6F23295354005F354D /* NewsViewModel.swift in Sources */,
@@ -729,6 +789,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84C3CE98232FD744005F354D /* HeadlinesList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84C3CE99232FD744005F354D /* HeadlinesList.xcdatamodel */,
+			);
+			currentVersion = 84C3CE99232FD744005F354D /* HeadlinesList.xcdatamodel */;
+			path = HeadlinesList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 84C6C35F23280B0D00E17AA4 /* Project object */;
 }
