@@ -27,8 +27,8 @@ class Network{
                 case .success(let value):
                     let newsJSON = value as! NSDictionary
                     let status = newsJSON.value(forKey: "status")! as! NSString
-                    print(newsJSON as NSDictionary)
                     print(status)
+                    print(newsJSON as NSDictionary)
                     if status == "ok"{
                         do{
                             let jsonData = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)

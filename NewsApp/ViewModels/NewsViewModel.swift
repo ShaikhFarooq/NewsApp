@@ -43,7 +43,6 @@ class NewsViewModel{
     public func saveHeadlinesToLocalDB(){
         news.map ({let news = $0
             _ = news.articles.map ({let headline = $0
-                print(headline)
                 DatastoreManager.shared?.saveHeadline(title: headline.title ?? "" , description: headline.description ?? "", author: headline.author ?? "", date:headline.publishedAt ?? "", poster: headline.urlToImage ?? "")
             })
         })
